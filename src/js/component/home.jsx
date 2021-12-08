@@ -8,7 +8,7 @@ const Home = () => {
 	let [ms, setms] = useState(0);
 	let [sec, setsec] = useState(0);
 	let [min, setmin] = useState(0);
-	let myInterval;
+	let [myInterval, setMyInterval] = useState(0);
 	const startWatch = () => {
 		setms((ms += 1));
 		if (ms == 100) {
@@ -35,8 +35,7 @@ const Home = () => {
 	};
 	const startInterval = () => {
 		clearInterval(myInterval);
-		myInterval = setInterval(startWatch, 10);
-		console.log(myInterval);
+		setMyInterval(setInterval(startWatch, 10));
 	};
 
 	const stopInterval = () => {
@@ -46,9 +45,9 @@ const Home = () => {
 	};
 	return (
 		<div className="container mt-5" id="test">
-			<h3>My Stopwatch</h3>
+			<h2 id="title">Stopwatch</h2>
 			<div id="watchSpace">
-				<Card body color="dark" inverse id="myWatch">
+				<Card inverse id="myWatch">
 					<CardBody className="d-flex flex-column justify-content-center align-items-center">
 						<CardTitle tag="h2" id="myTime">
 							<span>{twoDigits(min)}</span>

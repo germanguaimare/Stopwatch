@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Orbitron&display=swap');
+
+#title {
+    margin-bottom: 80px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 #myWatch {
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
-
+    background-color: #35732f;
+    border: 14px solid #fc5d00;
 }
 
+
 #buttonSpace Button {
+    background-color: #fc5d00;
     margin-right: 10px;
+}
+
+#buttonSpace Button:active {
+    background-color: red;
+    border: 2px solid white;
 }
 
 #watchSpace {
@@ -22,14 +40,12 @@
     flex-direction: column;
     align-items: center;
 }
-<<<<<<< HEAD
 
 #myTime {
-    padding-left: 5px;
     width: 13rem;
     text-align: start;
-    font-size: 3rem;
+    font-size: 34px;
     letter-spacing: 2px;
+    font-family: 'Orbitron', sans-serif;
+    color: #15ff00;
 }
-=======
->>>>>>> bbb5c6a0d206b4ce5697c39e169e4dd1df91dfd3
